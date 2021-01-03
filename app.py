@@ -7,9 +7,13 @@ app = Flask(__name__)
 def hello_world():
     return render_template('index.html')
 
+@app.route('/video/<num>')
+def video(num):
+    print(num)
+    render_template('si.html')
 
 
 if __name__ == '__main__':
-    app.run(FLASK_DEBUG=1)
+    app.run()
 
 
